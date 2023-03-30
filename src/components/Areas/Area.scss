@@ -1,0 +1,85 @@
+@use "/src/scss/index.scss" as *;
+
+.Area {
+  width: 100%;
+  padding: 0 3.875rem 3rem;
+
+  &-li {
+    @include flex(row, wrap, center, center);
+    gap: 50px;
+    color: $title;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &-h3 {
+    color: $s-title;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 0 0 3.125rem;
+  }
+
+  &-button {
+    text-decoration: underline;
+    transition: all 0.4s ease;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &-card {
+    padding: 6.25rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5625rem;
+  }
+
+  &-select {
+    display: none;
+
+    @include tablet {
+      display: block;
+      width: 20rem;
+      max-width: 100%;
+      overflow-y: auto;
+      cursor: pointer;
+      margin: auto;
+      padding: 0.9375rem 1.5625rem;
+      border: none;
+      outline: none;
+      border-radius: 0.75rem;
+      color: #444;
+      font-size: 1.125rem;
+      box-shadow: -3px 3px 5px 0px rgba(0, 0, 0, 0.1);
+      &::-webkit-scrollbar-track {
+        background-color: $white;
+        border-radius: 0.75rem;
+      }
+      &::-webkit-scrollbar {
+        width: 0.625rem;
+        background-color: $white;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: rgb(225, 225, 225);
+        border-radius: 0.75rem;
+      }
+
+      & option {
+        padding: 0.625rem 1.25rem;
+        margin-bottom: 0.5rem;
+        border-radius: 0.75rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $title;
+        }
+        &:checked {
+          background-color: $title;
+          color: $white;
+        }
+      }
+    }
+  }
+}

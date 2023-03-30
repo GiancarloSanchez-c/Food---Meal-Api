@@ -1,0 +1,96 @@
+@use "/src/scss/index.scss" as *;
+
+.Detail {
+  width: 100%;
+  padding: 0 3.875rem 3rem;
+
+  .Wrapper {
+    font-family: "Lora", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+  }
+
+  &-h3 {
+    color: $title;
+    text-align: center;
+    padding: 1.25rem;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+
+  }
+
+  &-img {
+    width: 100%;
+    max-width: 50rem;
+    max-height: 40rem;
+    margin: auto;
+  }
+
+  &-border {
+    border-bottom: 1px solid $nav;
+    width: 80%;
+    margin: auto;
+    padding: 0 0 3.125rem;
+  }
+
+  &-h4 {
+    color: $title;
+    font-size: 1rem;
+    margin: 1.25rem 0 1.25rem 10.3125rem;
+    @include mobile {
+      margin: 1.25rem 0;
+    }
+  }
+
+  &-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include mobile {
+      grid-template-columns: 1fr;
+      
+    }
+  }
+
+
+  &-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: auto;
+
+    @include mobile {
+      width: 100%;
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+  &-h5 {
+    color: $s-title;
+  }
+
+  &-ul {
+    @include flex(column, nowrap,flex-start,flex-start);
+    font-size: 0.875rem;
+    gap: 10px;
+  }
+
+  &-li {
+    list-style:georgian ;
+    &:nth-of-type(1) {
+      list-style: none;
+    }
+
+    @include mobile {
+      list-style: none;
+    }
+  }
+
+  &-p {
+    line-height: 2rem;
+    @include mobile {
+      margin: 3.125rem 0;
+    }
+  }
+
+}

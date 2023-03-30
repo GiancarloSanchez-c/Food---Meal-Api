@@ -1,0 +1,171 @@
+@use "/src/scss/index.scss" as *;
+
+.Header {
+  width: 100%;
+  padding: 0 3.875rem 3rem;
+
+  @include mobile {
+    padding: 0;
+  }
+
+  .Wrapper {
+    @include flex(column, nowrap, center, center);
+  }
+
+  &-top {
+    width: 100%;
+    @include flex(row, nowrap, space-between, center);
+
+    @include mobile {
+      @include flex(row, nowrap, flex-start, center);
+
+    }
+
+    ul {
+      @include flex(row, nowrap, center, center);
+      gap: 0.625rem;
+      color: $social;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    li {
+      border: 0.125rem solid $social;
+      border-radius: 50%;
+      padding: 0.3125rem;
+
+      &:hover {
+        background-color: $hover-social;
+        color: $white;
+      }
+    }
+  }
+
+  &-h1 {
+    max-width: 21.875rem;
+    padding: 0 0 0 5rem;
+
+    @include mobile {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  &-form {
+    display: flex;
+
+    @include mobile {
+      display: none;
+    }
+
+  }
+
+  &-input {
+    border-bottom: 0.0625rem solid $input;
+    text-transform: uppercase;
+    &::placeholder {
+      color: $input;
+      font-size: 0.75rem;
+      letter-spacing: 0.05rem;
+    }
+
+    
+  }
+
+  &-svg {
+    @include mobile {
+      padding: 0 1.25rem 0 0;
+      width: 2.8125rem;
+      height: 2.8125rem;
+    }
+  }
+
+  &-bars {
+    display: none;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 0.3125rem;
+    color: $black;
+
+    cursor: pointer;
+    animation: fadeIn 5s;
+    @include mobile() {
+      display: block;
+    }
+  }
+
+  &-img {
+    height: 6.25rem;
+    min-height: 9.375rem;
+  }
+
+  &-bottom {
+    width: 100%;
+    position: relative;
+    @include flex(row, nowrap, center, center);
+    color: $nav;
+
+    ul {
+      @include flex(row, nowrap, center, center);
+      gap: 1.875rem;
+      text-transform: uppercase;
+
+      @include mobile {
+        @include flex(column, nowrap, center, flex-start);
+        gap: 0.625rem;
+      }
+    }
+
+    li {
+      transition: all 0.4s ease;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &-nav {
+    @include mobile() {
+      background-color: #fff;
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -7.5rem;
+      margin-left: -100%;
+      padding: 2.25rem;
+      transition: all 0.6s ease-in-out;
+      z-index: 2;
+
+      &.isMobile {
+        margin-left: 0rem;
+      }
+    }
+    @include mobile {
+      width: 100%;
+      height: 100vh;
+    }
+  }
+
+  &-close {
+    display: none;
+
+    @include mobile {
+      display: block;
+      position: absolute;
+      z-index: 3;
+      cursor: pointer;
+      width: 6.4375rem;
+      left: 70%;
+      right: 0;
+      
+      &:hover {
+        border-radius: 0.25rem;
+        background-color: #0000000d;
+      }
+    }
+  }
+}

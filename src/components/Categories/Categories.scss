@@ -1,0 +1,37 @@
+@use '/src/scss/index.scss' as *;
+
+.Categories {
+  width: 100%;
+  padding: 0 3.875rem 3rem;
+  
+  &-li {
+    @include flex(row,wrap, center,center);
+    gap: 50px;
+    color: $title ;
+  }
+
+  &-h3 {
+    color: $s-title;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 0 0 3.125rem;
+  }
+
+  &-button {
+
+    text-decoration: underline;
+    transition: all .4s ease;
+    cursor: pointer;
+    &:hover{
+      opacity: .7;
+    }
+  }
+
+  &-card {
+    padding: 6.25rem 0 0 ;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5625rem;
+  }
+
+}

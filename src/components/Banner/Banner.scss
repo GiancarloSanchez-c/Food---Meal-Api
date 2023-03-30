@@ -1,0 +1,43 @@
+@use '/src/scss/index.scss' as *;
+
+.Banner {
+  width: 100%;
+  min-height: 50vh;
+  position: relative;
+  @include flex(column, nowrap, center, center);
+  background: url(/src/assets/Img/banner.jpg) no-repeat fixed top/ cover;
+  opacity: .7;
+  color: $white;
+  gap: 0.9375rem;
+  text-transform: uppercase;
+  font-family: 'Rubik', sans-serif;
+  letter-spacing: .1rem;
+
+
+
+  &-small {
+    font-size: .5rem;
+  }
+
+  &-h3 {
+    font-size: 2.3rem;
+    font-weight: 400;
+    letter-spacing: .3rem;
+    text-align: center;
+  }
+
+  &-a {
+    font-size: .85rem;
+    border: 0.0625rem solid $white;
+    padding: 0.625rem 1.5625rem;
+    color: $white;
+    transition: all .4s ease;
+
+    &:hover {
+      background-color: $white;
+      color: $black;
+    }
+
+  }
+
+}

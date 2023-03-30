@@ -1,0 +1,29 @@
+@use '/src/scss/index.scss' as *;
+
+.Error {
+  width: 100%;
+  padding: 1.25rem;
+  background: url(/src/assets/Img/404.jpg) no-repeat center center / contain ;
+
+  .Wrapper {
+    @include flex(column, nowrap, center,center);
+    gap: 50px;
+    color: $white;
+  }
+
+  &-h4 {
+    font-size: 10rem;
+    font-weight: 500;
+  }
+
+  &-button {
+    border: 1px solid $white;
+    padding: 0.625rem 2.5rem;
+    cursor: pointer;
+    transition: all .4s ease;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use '/src/scss/index.scss' as *;
+
+.Recipes {
+  width: 100%;
+  padding: 0 3.875rem 3rem;
+
+  .Wrapper {
+
+    @include flex(column, wrap, center,center);
+  }
+
+  &-ul {
+    @include flex(row, wrap, space-evenly,center);
+    width: 100%;
+    padding: 1.25rem 0 0;
+    color: $title;
+    text-decoration: underline;
+
+  }
+
+  &-li {
+    transition: all .4s ease;
+    &:hover{
+      opacity: .7;
+    }
+  }
+
+
+  &-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    place-content: center;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+
+  &-p {
+    text-align: center;
+  }
+}
