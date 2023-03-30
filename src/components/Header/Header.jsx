@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaFacebookF, FaPinterest, FaInstagram } from "react-icons/fa";
 import { AiOutlineBars, AiOutlineClose } from "react-icons/ai";
 import { CiSearch } from "react-icons/ci";
-import Logo from '@assets/Img/Logo1.png'
+import Logo from '@assets/Img/logo1.png'
 import "./Header.scss";
 
 export const Header = () => {
